@@ -23,3 +23,15 @@ function addEmployeeCard(name, position) {
   
     document.getElementById('employeeList').appendChild(card);
   }
+
+  // Task 3: Converting NodeLists to Arrays for Bulk Updates
+
+  function bulkUpdateEmployeeCards() {
+    const cards = document.querySelectorAll('.employee-card');
+    const cardArray = Array.from(cards);
+  
+    cardArray.forEach(card => {
+        card.classList.add('highlight');
+    });
+  }
+  
